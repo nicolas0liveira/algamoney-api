@@ -83,6 +83,13 @@
 			<version>3.4</version>
 		</dependency>
 		
+		<!-- Para parte de segurança -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		
+		
 		<!-- apenas para baixar o jar pro m2 e gerar o metamodel 
 			Em Configuração do projeto:
 			1. habilitar Annotation Processing > 
