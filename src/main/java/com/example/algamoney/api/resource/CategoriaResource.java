@@ -10,6 +10,7 @@ import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -41,6 +42,8 @@ public class CategoriaResource {
 //		return !categorias.isEmpty()? ResponseEntity.ok(categorias) : ResponseEntity.noContent().build();
 //	}
 	
+//	@CrossOrigin(maxAge = 10, origins = { "http://127.0.0.1:8000" }) //podemos usar aqui ou fazer uma configuracao global no Application.java (https://spring.io/guides/gs/rest-service-cors/)
+	// //Não utilizar pois a integração com o OAuth2 não funciona. O Browser manda o OPTION e não temos controle sobre a requisição
 	@GetMapping
 	public List<Categoria> listar() {
 		return categoriaRepository.findAll();
