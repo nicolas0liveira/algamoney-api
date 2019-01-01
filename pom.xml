@@ -123,6 +123,13 @@
 			<artifactId>hibernate-jpamodelgen</artifactId>
 			<scope>test</scope>
 		</dependency>-->
+		
+		<!-- dependencia para criar/usar a classe de propriedades -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
 	</dependencies>
 
 	<build>
