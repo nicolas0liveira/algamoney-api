@@ -32,7 +32,6 @@ public class CorsFilter implements Filter {
 			throws IOException, ServletException {
 		
 		String originPermitida = algamoneyApiProperty.getOrigemPermitida();
-		System.out.println("TTTTTTTTT"+originPermitida);
 		
 		HttpServletRequest request = (HttpServletRequest) req;
 		HttpServletResponse response = (HttpServletResponse) resp;
